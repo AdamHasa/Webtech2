@@ -1,0 +1,15 @@
+{
+    "name": "adamh/webtech2",
+    "autoload": {
+        "psr-4": {
+            "Adamh\\Webtech2\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "AdamHasa",
+            "email": "adamhasanin@hotmail.nl"
+        }
+    ],
+    "require": {}
+}
