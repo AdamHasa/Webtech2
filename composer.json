@@ -1,0 +1,20 @@
+{
+    "name": "anton/phpmvc-framework",
+    "autoload": {
+        "psr-4": {
+            "Anton\\PhpmvcFramework\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Antoni Bayens",
+            "email": "a.bayens@st.hanze.nl"
+        }
+    ],
+    "autoload":{
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "require": {}
+}
