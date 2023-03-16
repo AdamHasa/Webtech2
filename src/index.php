@@ -1,17 +1,24 @@
 <?php
+// public/index.php
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Slim\Factory\AppFactory;
+use DI\Container;
 
-require_once __DIR__.'/vendor/autoload.php';
-use \app\core\Application;
+// This will make referencing files by path much simpler
+$rootDir = realpath(__DIR__ . '/..');
+define('ROOT_DIR', $rootDir);
 
-$app = new Application();
+require ROOT_DIR . '/vendor/autoload.php';
 
-$app->router->get('/', funtion(){
-    return 'Hello World';
+$app = AppFactory::create();
+
+$container = new Container();
+
+$app->get('/hello/{name}', function (Request $request, Response $response, array $args) {
+    $name = $args['name'];
+    $response->getBody()->write("Hello, $name");
+    return $response;
 });
-
-$app->router->get('/profile', funtion(){
-    return 'profile';
-});
-
 
 $app->run();
