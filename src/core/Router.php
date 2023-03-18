@@ -17,10 +17,11 @@ class Router
 
     public function resolve()
     {
-        $this->request->getPath();
-        $method = $this->request->getMethod();
-        $path = null;
-        $callback = $this->routes= [$method][$path] ;
+        var_dump("me when i");
+//        $this->request->getPath();
+//        $method = $this->request->getMethod();
+//        $path = null;
+//        $callback = $this->routes= [$method][$path] ;
     }
 
 }
