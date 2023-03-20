@@ -31,6 +31,12 @@ class Router
         $this->routes['get'][$path] = $callback;
     }
 
+    public function post($path, $callback)
+    {
+        $this->routes['post'][$path] = $callback;
+    }
+
+
     public function resolve()
     {
         $path = $this->request->getPath();
@@ -38,7 +44,7 @@ class Router
         $callback = $this->routes[$method][$path] ?? false;
         if ($callback === false) {
             $this->response->setStatusCode(404);
-            echo 'Not found';
+            return $this->renderContent("DEZE PAGINA BESTAAD NIET ");
         }
         if(is_string($callback)){
             return $this->renderView($callback);
@@ -53,6 +59,13 @@ class Router
         return str_replace('{{content}}', $viewContent, $layoutContent);
     }
 
+    public function renderContent($viewContent)
+    {
+        $layoutContent = $this->layoutContent();
+        return str_replace('{{content}}', $viewContent, $layoutContent);
+    }
+
+
     protected function layoutContent()
     {
         ob_start();
@@ -66,4 +79,7 @@ class Router
         include_once Application::$ROOT_DIR."/views/$view.php";
         return ob_get_clean();
     }
+
+
+
 }
