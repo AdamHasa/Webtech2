@@ -1,12 +1,5 @@
 <h1>Maak een account</h1>
 
-<?php
-echo '<pre>';
-var_dump($errors);
-echo '</pre>';
-exit;
-?>
-
 <form action="" method="post">
     <div class="row">
         <div class="col">
