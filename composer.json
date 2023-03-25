@@ -16,5 +16,9 @@
             "app\\": "./"
         }
     },
-    "require": {}
+
+    "require": {
+        "doctrine/orm": "*"
+    }
+
 }

@@ -44,7 +44,7 @@ class Router
         $callback = $this->routes[$method][$path] ?? false;
         if ($callback === false) {
             $this->response->setStatusCode(404);
-            return $this->renderContent("DEZE PAGINA BESTAAD NIET ");
+            return $this->renderView("_404");
         }
         if(is_string($callback)){
             return $this->renderView($callback);
