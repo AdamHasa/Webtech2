@@ -15,7 +15,7 @@ class Form
 {
     public static function begin($action, $method)
     {
-        echo sprintf('<form action="%s" method="">', $action, $method);
+        echo sprintf('<form action="%s" method="%s">', $action, $method);
         return new Form();
     }
 
@@ -27,6 +27,10 @@ class Form
     public function field(Model $model, $attribute)
     {
         return new Field($model, $attribute);
+    }
+    public function __toString()
+    {
+        return '1';
     }
 
 }

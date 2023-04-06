@@ -1,12 +1,12 @@
 <h1>Maak een account</h1>
-<?php echo \app\core\form\Form::begin('', "post") ?>
-    <?php echo $form->field($model, 'firstname')?>
-    <?php echo $form->field($model, 'lastname')?>
-    <?php echo $form->field($model, 'email')?>
-    <?php echo $form->field($model, 'password')?>
-    <?php echo $form->field($model, 'confirmPassword')?>
+<?php $form = \app\core\form\Form::begin('', "post") ?>
+    <?php echo $form->field($model, 'firstname') ?>
+    <?php echo $form->field($model, 'lastname') ?>
+    <?php echo $form->field($model, 'email') ?>
+    <?php echo $form->field($model, 'password') ?>
+    <?php echo $form->field($model, 'confirmPassword') ?>
 
-<button type="submit" class="btn btn-primary">Maak mijn account aan</button>
+    <button type="submit" class="btn btn-primary">Maak mijn account aan</button>
 <?php \app\core\form\Form::end() ?>
 <!--<form action="" method="post">
     <div class="row">

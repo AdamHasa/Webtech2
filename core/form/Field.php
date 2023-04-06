@@ -1,6 +1,6 @@
 <?php
 
-namespace core\form;
+namespace app\core\form;
 
 use app\core\Model;
 
@@ -24,6 +24,12 @@ class Field
     {
         $this->model = $model;
         $this->attribute = $attribute;
+    }
+
+
+    public function __toString()
+    {
+        return '1';
     }
 
 
