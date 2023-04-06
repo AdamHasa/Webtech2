@@ -2,7 +2,6 @@
 
 namespace app\core;
 
-
 /**
  * @author Antoni Bayens
  * @package app\core
@@ -19,5 +18,4 @@ class Controller
     {
         return Application::$app->router->renderView($view, $params);
     }
-
 }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/PHPMVCFramework.iml" filepath="$PROJECT_DIR$/.idea/PHPMVCFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PHPMVCFramework2.iml" filepath="$PROJECT_DIR$/.idea/PHPMVCFramework2.iml" />
     </modules>
   </component>
 </project>

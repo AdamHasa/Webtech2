@@ -5,8 +5,6 @@ namespace app\core\form;
 use app\core\Model;
 
 /**
- * Class Form
- *
  * @author Antoni Bayens
  * @package app\core\form
  */
@@ -28,9 +26,4 @@ class Form
     {
         return new Field($model, $attribute);
     }
-    public function __toString()
-    {
-        return '1';
-    }
-
 }

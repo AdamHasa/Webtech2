@@ -1,15 +1,14 @@
 <?php
 
-/*
- * Class Request
- *
+namespace app\core;
+
+/**
  * @author Antoni Bayens
+ * @package app\core
  */
 
-namespace app\core;
 class Request
 {
-
     public function getPath()
     {
         $path = $_SERVER['REQUEST_URI'] ?? '/';
@@ -18,10 +17,6 @@ class Request
             return $path;
         }
         return substr($path, 0, $position);
-        echo '<pre>';
-        var_dump($position);
-        echo '</pre>';
-        exit;
     }
 
     public function method()
@@ -42,13 +37,13 @@ class Request
     public function getBody()
     {
         $body = [];
-        if ($this->method() === 'get'){
-            foreach ($_GET as $key => $value){
+        if ($this->method() === 'get') {
+            foreach($_GET as $key => $value) {
                 $body[$key] = filter_input(INPUT_GET, $key, FILTER_SANITIZE_SPECIAL_CHARS);
             }
         }
-        if ($this->method() === 'post'){
-            foreach ($_POST as $key => $value){
+        if ($this->method() === 'post') {
+            foreach($_POST as $key => $value) {
                 $body[$key] = filter_input(INPUT_POST, $key, FILTER_SANITIZE_SPECIAL_CHARS);
             }
         }

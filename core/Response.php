@@ -7,6 +7,7 @@ namespace app\core;
  *
  * @author Antoni Bayens
  */
+
 class Response
 {
     public function setStatusCode(int $code)

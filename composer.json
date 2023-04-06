@@ -1,8 +1,8 @@
 {
-    "name": "anton/phpmvc-framework",
+    "name": "anton/phpmvc-framework2",
     "autoload": {
         "psr-4": {
-            "Anton\\PhpmvcFramework\\": "src/"
+            "app\\": "./"
         }
     },
     "authors": [
@@ -11,10 +11,8 @@
             "email": "a.bayens@st.hanze.nl"
         }
     ],
-    "autoload":{
-        "psr-4": {
-            "app\\": "./"
-        }
-    },
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+      "ext-pdo": "*"
+    }
 }

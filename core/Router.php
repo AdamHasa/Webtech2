@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * Class Router
  *
  * @author Antoni Bayens
@@ -13,7 +13,7 @@ class Router
 {
     public Request $request;
     public Response $response;
-    protected array $routes = [];
+    protected array $routes =[];
 
     /**
      * @param Request $request
@@ -24,7 +24,6 @@ class Router
         $this->request = $request;
         $this->response = $response;
     }
-
 
     public function get($path, $callback)
     {
@@ -45,7 +44,7 @@ class Router
             $this->response->setStatusCode(404);
             return $this->renderView("_404");
         }
-        if(is_string($callback)){
+        if (is_string($callback)){
             return $this->renderView($callback);
         }
         if (is_array($callback)){
@@ -61,7 +60,6 @@ class Router
         $viewContent = $this->renderOnlyView($view, $params);
         return str_replace('{{content}}', $viewContent, $layoutContent);
     }
-
     public function renderContent($viewContent)
     {
         $layoutContent = $this->layoutContent();
@@ -78,11 +76,12 @@ class Router
 
     protected function renderOnlyView($view, $params)
     {
-        foreach ($params as $key => $value){
+        foreach ($params as $key => $value) {
             $$key = $value;
         }
         ob_start();
         include_once Application::$ROOT_DIR."/views/$view.php";
         return ob_get_clean();
     }
+
 }

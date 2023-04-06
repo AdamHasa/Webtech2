@@ -4,14 +4,10 @@ namespace app\controllers;
 
 use app\core\Controller;
 use app\core\Request;
-use app\core\Model;
-use app\models\RegisterModel;
-
+use app\models\User;
 
 /**
- * Class AuthController
- *
- * @author Antoni Bayens
+ * @author
  * @package app\controllers
  */
 
@@ -25,13 +21,17 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
-        $registerModel = new RegisterModel();
+        $registerModel = new User();
         if ($request->isPost()){
+            $registerModel = new User();
             $registerModel->loadData($request->getBody());
 
-            if ($registerModel->validate() && $registerModel->register()){
+
+            if ($registerModel->validate() && $registerModel->register()) {
                 return 'Success';
             }
+
+
             return $this->render('register', [
                 'model' => $registerModel
             ]);

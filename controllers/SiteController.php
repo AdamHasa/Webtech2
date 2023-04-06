@@ -7,6 +7,8 @@ use app\core\Controller;
 use app\core\Request;
 
 /**
+ * Class SiteController
+ *
  * @author Antoni Bayens
  * @package app\controllers
  */
@@ -25,7 +27,6 @@ class SiteController extends Controller
     {
         return $this->render('contact');
     }
-
     public function handleContact(Request $request)
     {
         $body = $request->getBody();
