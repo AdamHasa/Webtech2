@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost:blabla", "username", "password");
+$conn = mysqli_connect("localhost:3306", "root", "DitIsSQL2002");
 
 $query = mysqli_query($conn, "select naam from exams");
 

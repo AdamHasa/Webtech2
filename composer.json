@@ -18,7 +18,9 @@
     },
 
     "require": {
-        "doctrine/orm": "*"
+        "doctrine/orm": "*",
+      "ext-mysqli": "*",
+        "vlucas/phpdotenv": "^5.5"
     }
 
 }
