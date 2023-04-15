@@ -1,4 +1,5 @@
-<h3><?php
+<h1>Home</h1>
+<h3>Welcome <?php
 
     $servername = "localhost";
     $username = "root";
@@ -10,19 +11,20 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $userId = $_GET['id'];
 
-    $sql = "SELECT name FROM exams WHERE id = $userId";
+    $sql = "SELECT name FROM exams";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            echo "Exam: " . $row["name"]. "<br>";
+            echo "id: " . $row["name"]. "<br>";
         }
     } else {
-        echo "Er zijn geen examens beschikbaar voor";
+        echo "0 results";
     }
     $conn->close();
-    ?> </h3>
 
+//    echo 'Hello ' . htmlspecialchars($_GET["name"]) . '!';
+
+    ?> </h3>

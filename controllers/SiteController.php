@@ -20,24 +20,31 @@ class SiteController extends Controller
     public function home()
     {
         $params = [
-            'name' => "Antoni Bayens"
+            'name' => "Antoni Bayens",
+            'id' => "1"
         ];
         return $this->render('home', $params);
     }
 
     public function contact(Request $request, Response $response)
     {
-        $contact = new ContactForm();
-        if ($request->isPost()){
-            $contact->loadData($request->getBody());
-            if ($contact->validate() && $contact->send()) {
-                Application::$app->session->setFlash('success', 'Thanks for contacting us.');
-                return $response->redirect('/contact');
-            }
-        }
-        return $this->render('contact', [
-            'model' => $contact
-        ]);
+
+        return $this->render('contact');
+    }
+
+    public function examinfo()
+    {
+        return $this->render('examinfo');
+    }
+
+    public function handleContact(Request $request)
+    {
+        $body = $request->getBody();
+        echo '<pre>';
+        var_dump($body);
+        echo '</pre>';
+        exit;
+        return 'Handling submitted data';
 
     }
 }
