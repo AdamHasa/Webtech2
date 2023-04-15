@@ -5,6 +5,8 @@ namespace app\controllers;
 use app\core\Application;
 use app\core\Controller;
 use app\core\Request;
+use app\core\Response;
+use app\models\ContactForm;
 
 /**
  * Class SiteController
@@ -24,8 +26,9 @@ class SiteController extends Controller
         return $this->render('home', $params);
     }
 
-    public function contact()
+    public function contact(Request $request, Response $response)
     {
+
         return $this->render('contact');
     }
 
@@ -42,5 +45,6 @@ class SiteController extends Controller
         echo '</pre>';
         exit;
         return 'Handling submitted data';
+
     }
 }

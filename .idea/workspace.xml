@@ -87,18 +87,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/xampp/htdocs/webtech",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "settings.editor.selected.configurable": "editor.preferences.appearance",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\PHPMVCFramework2\views\layouts" />
       <recent name="C:\xampp\htdocs\PHPMVCFramework2\views" />
+      <recent name="C:\xampp\htdocs\PHPMVCFramework2\views\layouts" />
       <recent name="C:\xampp\htdocs\PHPMVCFramework2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -120,6 +130,7 @@
       <workItem from="1680800720005" duration="1312000" />
       <workItem from="1680802139782" duration="7337000" />
       <workItem from="1680853473802" duration="1480000" />
+
       <workItem from="1680855566588" duration="4869000" />
       <workItem from="1681045234598" duration="573000" />
       <workItem from="1681045813942" duration="2602000" />
