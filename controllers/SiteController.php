@@ -18,7 +18,8 @@ class SiteController extends Controller
     public function home()
     {
         $params = [
-            'name' => "Antoni Bayens"
+            'name' => "Antoni Bayens",
+            'id' => "1"
         ];
         return $this->render('home', $params);
     }
@@ -27,6 +28,12 @@ class SiteController extends Controller
     {
         return $this->render('contact');
     }
+
+    public function examinfo()
+    {
+        return $this->render('examinfo');
+    }
+
     public function handleContact(Request $request)
     {
         $body = $request->getBody();
